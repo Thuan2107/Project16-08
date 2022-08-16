@@ -180,3 +180,41 @@ const products = [
     },
 
 ]
+
+const fillter_sorts = [
+    {
+        name : "Giá từ cao đến thấp",
+    },
+    {
+        name : "Giá từ thấp đến cao",
+    },
+    {
+        name : "Từ A - Z",
+    },
+    {
+        name : "Từ Z - A",
+    },
+    {
+        name : "Khuyến mãi nhiều nhất",
+    },
+    {
+        name : "Khuyến mãi ít nhất",
+    },
+]
+
+const fillter_type = [
+    {
+        name : "Tất cả",
+    },
+    {
+        name : "Bán chạy",
+    },
+    {
+        name : "Giảm sâu Friends",
+    },
+    {
+        name : "Siêu hot",
+    },
+]
+
+
