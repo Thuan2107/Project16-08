@@ -1,103 +1,14 @@
-.radio-left{
-    background-color: white;
-}
+
 
 body {
   overflow-x: hidden;
 }
 
-.radio-left {
-  margin-top: 20px;
-}
-.teller {
-  height: 50px;
-  border-bottom: 1px solid #97818136;
-  position: relative;
-}
-.teller p {
-  padding-left: 20px;
-  padding-top: 10px;
-  font-weight: bold;
-  font-size: 15px;
-}
-.sort {
-  margin: 20px;
-}
-.sort p {
-  font-weight: bold;
-  font-size: 15px;
-  padding-bottom: 15px;
-}
-.radio-title input:checked {
-  background-color: #2196f3;
-}
-label {
-  font-weight: 500;
-}
-.star {
-  text-align: center;
-  color: orange;
-}
-.fa-color {
-  color: darkgray;
-}
-.range-slide {
-    position: relative;
-    margin-bottom: 40px;
-    height: 4px;
-    width: 240px;
-  }
-
-  .slide {
-    position: absolute;
-    top: 0;
-    height: 15px;
-    background: #ccc;
-    left: 9px;
-    right: 9px;
-  }
-
-  .line {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background-color: white;
-  }
-
-  .thumb {
-    position: absolute;
-    z-index: 2;
-    text-align: left;
-    border: 1px solid black;
-    background-color: white;
-    border-radius: 50%;
-    outline: none;
-    top: -7px;
-    height: 30px;
-    width: 30px;
-    margin-left: -9px;
-  }
-
-
-  input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    pointer-events: all;
-    border-radius: 50%;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-  }
 
 
 
-.wrapper {
-  margin: 20px;
-  overflow: hidden;
-  min-height: 100vh;
-}
+
+
 /*main category*/
 
 /*main category*/

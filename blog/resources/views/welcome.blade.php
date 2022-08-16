@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/css/grid.css">
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/menu_category.css">
-        <link rel="stylesheet" href="/css/filter_sidebar.css">
+        <link rel="stylesheet" href="/css/filter_sider.css">
         <link rel="stylesheet" href="/css/main_category.css">
         <link rel="stylesheet" href="/css/cart.css">
 
