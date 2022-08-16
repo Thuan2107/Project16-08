@@ -1,5 +1,6 @@
 let min = 0;
 let max = 100;
+let cloneProducts = []
 
 const calcLeftPosition = value => 100 / (100 - 1) *  (value - 1);
 
@@ -26,6 +27,41 @@ $('#rangeMax').on('input', function(e) {
         'right': (100 - calcLeftPosition(newValue)) + '%'
     });
 });
+
+const ChangeToSlug = (keyword) => {
+    let namef, slug;
+
+    namef = keyword
+
+    slug = namef.toLowerCase();
+
+    //Đổi ký tự có dấu thành không dấu
+    slug = slug.replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a');
+    slug = slug.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, 'e');
+    slug = slug.replace(/i|í|ì|ỉ|ĩ|ị/gi, 'i');
+    slug = slug.replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/gi, 'o');
+    slug = slug.replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/gi, 'u');
+    slug = slug.replace(/ý|ỳ|ỷ|ỹ|ỵ/gi, 'y');
+    slug = slug.replace(/đ/gi, 'd');
+    //Xóa các ký tự đặt biệt
+    slug = slug.replace(/\`|\~|\!|\@|\#|\||\$|\%|\^|\&|\*|\(|\)|\+|\=|\.|\/|\?|\>|\<|\'|\"|\:|\;|_/gi, '');
+    //Đổi khoảng trắng thành ký tự gạch ngang
+    slug = slug.replace(/ /gi, "-");
+    //Đổi nhiều ký tự gạch ngang liên tiếp thành 1 ký tự gạch ngang
+    //Phòng trường hợp người nhập vào quá nhiều ký tự trắng
+    slug = slug.replace(/\-\-\-\-\-/gi, '-');
+    slug = slug.replace(/\-\-\-\-/gi, '-');
+    slug = slug.replace(/\-\-\-/gi, '-');
+    slug = slug.replace(/\-\-/gi, '-');
+    //Xóa các ký tự gạch ngang ở đầu và cuối
+    slug = '@' + slug + '@';
+    slug = slug.replace(/\@\-|\-\@|\@/gi, '');
+    // Thay ,- thành ,
+    slug = slug.replace(/\,\-/gi, ", ");
+    slug = slug.replace(/\-/gi, "");
+    //In kết quả ra slug
+    return slug
+}
 
 const products = [
     {
@@ -149,7 +185,7 @@ const products = [
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
+        name: "Màn hình vi tính Xiaomi Mi Desktop Monitor 1C 23.8 inch (BHR4510GL) - Bản Quốc Tế Chính Hãng",
         id: 9,
         category: 1,
         image: "https://cf.shopee.vn/file/5d6082b492403ddeb404115576c29da9",
@@ -164,7 +200,7 @@ const products = [
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
+        name: "Màn Hình hãng GLOWAY17|19|22|24 inch - Mới 100% FULL BOX - Hàng chính hãng bảo hành 2 năm",
         id: 10,
         category: 1,
         image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
@@ -182,137 +218,168 @@ const products = [
         name: "Áo sơ mi dài tay form rộng cổ V hàn quốc vải linen cao cấp, thấm hút mồ hôi tốt - SEOUL",
         id: 11,
         category: 2,
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
-        type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        image: "https://cf.shopee.vn/file/2c2ae38b3df22aac6ee2e576051a3430",
+        cost_price: 350000,
+        discount: "10",
+        evaluate: 4.7,
+        type: 2,
+        logo_shop: "https://cf.shopee.vn/file/5ed29c1e4de6cfb23f319b67de6ac764_tn",
+        name_shop: "seoulsg",
+        inventory: 412,
+        trade_price: 325000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
-        type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        name: "QUẦN KAKI TÚI HỘP ỐNG RỘNG FORM UNISEX NAM NỮ (kèm ảnh thật)",
+        id: 12,
+        category: 2,
+        image: "https://cf.shopee.vn/file/dc122831c7f86e0fbd370cea75e87ad2",
+        cost_price: 170000,
+        discount: "14",
+        evaluate: 4.9,
+        type: 2,
+        logo_shop: "https://cf.shopee.vn/file/a4ab5a471a636cfeb2f8c59079df0b03_tn",
+        name_shop: "sonmin_unisex",
+        inventory: 311,
+        trade_price: 150000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
+        name: "QUẦN SHORT ÂU - QUẦN ĐÙI FORM UNISEX NAM NỮ (kèm hình chụp thật)",
+        id: 13,
+        category: 2,
         image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
-        type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        cost_price: 150000,
+        discount: "18",
+        evaluate: 4.9,
+        type: 2,
+        logo_shop: "https://cf.shopee.vn/file/a4ab5a471a636cfeb2f8c59079df0b03_tn",
+        name_shop: "sonmin_unisex",
+        inventory: 309,
+        trade_price: 135000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
-        type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        name: "Áo sơ mi dài tay form rộng hàn quốc cổ bẻ, vải linen mềm mại, thấm hút mồ hôi tốt - SEOUL",
+        id: 14,
+        category: 2,
+        image: "https://cf.shopee.vn/file/86b4f78c85c71b128e3616ea3a282d87",
+        cost_price: 210000,
+        discount: "15",
+        evaluate: 4.9,
+        type: 2,
+        logo_shop: "https://cf.shopee.vn/file/5ed29c1e4de6cfb23f319b67de6ac764_tn",
+        name_shop: "seoulsg",
+        inventory: 129,
+        trade_price: 1900000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
+        name: "Đồng hồ nam dây da Dyanwatch đồng hồ đeo tay nam thời trang mặt vuông",
+        id: 15,
+        category: 3,
+        image: "https://cf.shopee.vn/file/b58d5d62afee1bc720a327c747d1abc6",
+        cost_price: 130000,
+        discount: "5",
+        evaluate: 4.9,
         type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        logo_shop: "https://cf.shopee.vn/file/8149b1ddd1f3fda236cbd13557da9a45_tn",
+        name_shop: "dyanwatchshop",
+        inventory: 801,
+        trade_price: 120000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
+        name: "Đồng hồ thời trang nam nữ MSTIANQ mặt vuông, đồng hồ điện tử chính hãng dây cao su cao cấp chống nước chống sốc",
+        id: 16,
+        category: 3,
+        image: "https://cf.shopee.vn/file/c39537056b56125c560e1635243b6c90",
         cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
+        discount: "10",
+        evaluate: 4.7,
         type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        logo_shop: "https://cf.shopee.vn/file/1a7bac6ad0f79a3665ab01e82103eeeb_tn",
+        name_shop: "windwatch",
+        inventory: 319,
+        trade_price: 2600000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
+        name: "Đồng hồ nam cao cấp POEDAGAN mặt đính đá, đồng hồ chính hãng chống nước chống xước dây sắt",
+        id: 17,
+        category: 3,
+        image: "https://cf.shopee.vn/file/9a23a4827746102408a4f061a54227a7",
+        cost_price: 240000,
+        discount: "15",
+        evaluate: 4.6,
         type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        logo_shop: "https://cf.shopee.vn/file/1a7bac6ad0f79a3665ab01e82103eeeb_tn",
+        name_shop: "windwatch",
+        inventory: 349,
+        trade_price: 220000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
-        type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
-        inventory: 379,
-        trade_price: 2700000,
+        name: "ÁO KHOÁC KAKI JEANS FULL 4 MÀU FORM UNISEX NAM NỮ (kèm ảnh thật)",
+        id: 18,
+        category: 2,
+        image: "https://cf.shopee.vn/file/150ede4d326c53bba323e49c4ab9cd6f",
+        cost_price: 170000,
+        discount: "18",
+        evaluate: 4.9,
+        type: 2,
+        logo_shop: "https://cf.shopee.vn/file/a4ab5a471a636cfeb2f8c59079df0b03_tn",
+        name_shop: "sonmin_unisex",
+        inventory: 503,
+        trade_price: 160000,
         trade_inventory: 10
     },
     {
-        name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-        id: 10,
-        category: [4],
-        image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
-        cost_price: 2800000,
-        discount: "20",
-        evaluate: 4.8,
+        name: "Nón mũ lưỡi trai WONDER thời trang unisex nam nữ",
+        id: 19,
+        category: 3,
+        image: "https://cf.shopee.vn/file/46ddad2772eb651936a791099f773731",
+        cost_price: 80000,
+        discount: "10",
+        evaluate: 4.9,
         type: 3,
-        logo_shop: "https://cf.shopee.vn/file/661e874c48d95129a80bd77f80b2f2ba_tn",
-        name_shop: "huynhlamcomputer",
+        logo_shop: "https://cf.shopee.vn/file/840a8811ffb97c476b84c98275c7ced3_tn",
+        name_shop: "ab_house",
         inventory: 379,
-        trade_price: 2700000,
+        trade_price: 70000,
         trade_inventory: 10
     },
+    {
+        name: "Giày AF1 Vệt Nâu Hàng Đẹp Full Box, giày Air force 1 Đủ Size 36-43 Full Box, Bill",
+        id: 20,
+        category: 4,
+        image: "https://cf.shopee.vn/file/f003b2b1b8c2d994b6c53545c3ecdc32" +
+            "",
+        cost_price: 315000,
+        discount: "10",
+        evaluate: 4.8,
+        type: 3,
+        logo_shop: "https://cf.shopee.vn/file/e6a64f3575ca9fc1c95986505aadf609_tn",
+        name_shop: "mymon_shop",
+        inventory: 420,
+        trade_price: 290000,
+        trade_inventory: 10
+    },
+    {
+        name: "Giày thể thao Sneaker nam nữ AF1 trắng cao cấp ,thời trang Genz 2022",
+        id: 21,
+        category: 4,
+        image: "https://cf.shopee.vn/file/f543e2b6d5eedc46610faec55137aea3",
+        cost_price: 350000,
+        discount: "10",
+        evaluate: 5.0,
+        type: 3,
+        logo_shop: "https://cf.shopee.vn/file/be7ca6c9cd0778b79cfe3df2175fbe78_tn",
+        name_shop: "h2_shoes",
+        inventory: 420,
+        trade_price: 330000,
+        trade_inventory: 10
+    }
 
 ]
 
