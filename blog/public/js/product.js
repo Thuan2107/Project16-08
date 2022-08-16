@@ -1,6 +1,8 @@
-let listProduct = ''
-products.forEach((product,index) => {
-     listProduct += `<div class="product_item p-4">
+const renderProduct = (start = 0, limit = 0) => {
+    let cloneProducts = products.slice(start, limit)
+    let listProduct = ''
+    cloneProducts.forEach((product,index) => {
+        listProduct += `<div class="product_item p-4">
                     <div class="product_cart">
                         <div class="cart_header">
                             <div class="product_image">
@@ -39,5 +41,7 @@ products.forEach((product,index) => {
                     </div>
                 </div>
         `
-})
-$('.product_list').append(listProduct)
+    })
+    $('.product_list').html(listProduct)
+
+}

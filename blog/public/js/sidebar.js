@@ -7,7 +7,6 @@ fillter_sorts.forEach((filter, i) => {
                 <label for="price${i}" >${filter.name}</label>
             </div>`
 })
-console.log(filter_price)
 $(".sort.price").html(filter_price)
 
 let filter_loaihinh = ' <p>Loại Hình</p>'
@@ -20,7 +19,6 @@ fillter_type.forEach((filter,i)=>{
             </div>`
 })
 
-console.log(filter_loaihinh)
 $(".type ").html(filter_loaihinh)
 
 
