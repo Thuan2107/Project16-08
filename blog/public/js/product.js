@@ -1,5 +1,5 @@
 let listProduct = ''
-products.forEach((product) => {
+products.forEach((product,index) => {
      listProduct += `<div class="product_item p-4">
                     <div class="product_cart">
                         <div class="cart_header">
@@ -12,7 +12,7 @@ products.forEach((product) => {
                                 </div>
                                 <span class="shop_name">${product.name_shop}</span>
                             </div>
-                            <div class="kpi">${product.type}</div>
+                            <div class="kpi">${fillter_type[product.type].name}</div>
                         </div>
                         <div class="cart_content">
                             <div class="product_name">
@@ -28,8 +28,8 @@ products.forEach((product) => {
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
                                 <div class="product_price">
-                                    <span class="old_price">${product.cost_price} </span>
-                                    <span class="new_price"> ${product.cost_price - (product.cost_price * (product.discount / 100))}</span>
+                                    <span class="old_price">${product.cost_price.toLocaleString('it-IT', )} </span>
+                                    <span class="new_price"> ${(product.cost_price - (product.cost_price * (product.discount / 100))).toLocaleString('it-IT', )}</span>
                                 </div>
                             </div>
                             <div class="addCart">
