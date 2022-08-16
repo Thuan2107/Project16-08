@@ -87,8 +87,6 @@
                 @include("filter_sidebar")
                 {{--   main category--}}
                 @include("main_category")
-                {{--   pagination--}}
-                @include("pagination")
                 {{--   cart--}}
                 @include('cart')
         </div>
