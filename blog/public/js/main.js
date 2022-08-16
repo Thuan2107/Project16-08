@@ -26,3 +26,5 @@ $('#rangeMax').on('input', function(e) {
         'right': (100 - calcLeftPosition(newValue)) + '%'
     });
 });
+
+const a= [123]
