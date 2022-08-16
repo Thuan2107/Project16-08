@@ -21,4 +21,6 @@ fillter_type.forEach((filter,i)=>{
 })
 
 console.log(filter_loaihinh)
-$(".type").html(filter_loaihinh)
+$(".type ").html(filter_loaihinh)
+
+

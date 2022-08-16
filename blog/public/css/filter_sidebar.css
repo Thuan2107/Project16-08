@@ -163,4 +163,11 @@ label {
 .teller::before {
     top: 10px;
 }
+.input{
+    background: white;
+    border: 1px solid black;
+    width: 100%;
+    color: black;
+    font-size: 15px;
+}
 
