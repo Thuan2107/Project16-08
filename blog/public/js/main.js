@@ -1,7 +1,7 @@
-let min = 10;
+let min = 0;
 let max = 100;
 
-const calcLeftPosition = value => 100 / (100 - 10) *  (value - 10);
+const calcLeftPosition = value => 100 / (100 - 1) *  (value - 1);
 
 $('#rangeMin').on('input', function(e) {
     const newValue = parseInt(e.target.value);
@@ -20,7 +20,7 @@ $('#rangeMax').on('input', function(e) {
     if (newValue < min) return;
     max = newValue;
     $('#thumbMax').css('left', calcLeftPosition(newValue) + '%');
-    $('#max').html(newValue);
+    $('#max').html(Math.floor((newValue/100) * $('#ValueMax').val()));
     $('#line').css({
         'left': calcLeftPosition(min) + '%',
         'right': (100 - calcLeftPosition(newValue)) + '%'

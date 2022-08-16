@@ -8,7 +8,7 @@
                 </span>
                 <div class="box-categories">
                     <div class="row menu__categories-box">
-                        
+
                     </div>
                 </div>
             </div>
