@@ -26,3 +26,4 @@ $('#rangeMax').on('input', function(e) {
         'right': (100 - calcLeftPosition(newValue)) + '%'
     });
 });
+
