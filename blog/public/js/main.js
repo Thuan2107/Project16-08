@@ -27,6 +27,8 @@ $('#rangeMax').on('input', function(e) {
     });
 });
 
+const a= [123]
+
 const products = [
     {
         name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
