@@ -10,14 +10,15 @@ fillter_sorts.forEach((filter, i) => {
 console.log(filter_price)
 $(".sort.price").html(filter_price)
 
-let filter_type = ' <p>Loại Hình</p>'
+let filter_loaihinh = ' <p>Loại Hình</p>'
 
 fillter_type.forEach((filter,i)=>{
-    filter_type += `<div>
-                <input type="radio" id="price${i}" class="radio-title" name="type" value="${filter.name}"  ${i==0 ?'checked':''}/>
-                <label for="price${i}" >${filter.name}</label>
+    filter_loaihinh += `<div>
+                <input type="radio" id="type${i}" class="radio-title" name="type" value="${filter.name}"
+                       ${i==0 ?'checked':''}/>
+                <label for="type${i}" >${filter.name}</label>
             </div>`
 })
 
-console.log(filter_type)
-$(".type .sort").html(filter_type)
+console.log(filter_loaihinh)
+$(".type").html(filter_loaihinh)
