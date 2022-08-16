@@ -38,7 +38,7 @@ border-left: 2px solid orangered;
 
 .product_list {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     flex-wrap: wrap;
 }
 
@@ -49,7 +49,12 @@ border-left: 2px solid orangered;
 }
 
 .product_image {
+    width: 100%;
     transition: 0.1s linear;
+}
+
+.product_image img{
+    width: 100%;
 }
 
 .product_item:hover .product_image {
@@ -132,36 +137,58 @@ border-left: 2px solid orangered;
 }
 
 .cart_content .product_name {
-    font-size: 20px;
     font-weight: bold;
-    border-bottom: 0.5px solid rgb(64 64 64 / 10%);
-    padding: 8px 0;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(64 64 64 / 10%);
+    /*padding: 8px 0;*/
     color: #123456;
+    /*word-wrap: break-word;*/
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .cart_content .rate_and_price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 8px 0;
 }
 
-.cart_content .rate_and_price i {
-    color: rgb(241, 204, 39);
-    font-size: 12px;
+.cart_content .rate_and_price .rate_star{
+    display: flex;
+    align-items: center;
 }
 
-.cart_content .rate_and_price i:last-child {
-    color: gray;
+.cart_content .rate_and_price .rate_star .rate_number{
+    color: orangered;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 4px;
 }
+
+.cart_content .rate_and_price i {
+    color: orangered;
+    font-size: 10px;
+}
+
+/*.cart_content .rate_and_price i:last-child {*/
+/*    color: gray;*/
+/*}*/
 
 .cart_content .rate_and_price .product_price {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
 .cart_content .rate_and_price .product_price .old_price {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: gray;
     text-decoration: line-through;
@@ -169,7 +196,7 @@ border-left: 2px solid orangered;
 }
 
 .cart_content .rate_and_price .product_price .new_price {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: orangered;
 }
