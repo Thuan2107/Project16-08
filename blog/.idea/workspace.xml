@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bcd3c5e1-fed0-45d3-a1d4-087dd56fbcee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/handle/sortPriceAndRate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/handle/sortPriceAndRate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/filter_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filter_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pagination.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,7 @@
       <updated>1660618893301</updated>
       <workItem from="1660618894880" duration="255000" />
       <workItem from="1660619317695" duration="2075000" />
-      <workItem from="1660622359142" duration="13538000" />
+      <workItem from="1660622359142" duration="14974000" />
     </task>
     <servers />
   </component>
