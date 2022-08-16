@@ -233,5 +233,7 @@
                 </div>
             </div>
         </div>
+        {{--   pagination--}}
+        @include("pagination")
     </div>
 </div>
