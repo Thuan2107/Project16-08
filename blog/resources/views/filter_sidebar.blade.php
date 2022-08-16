@@ -3,7 +3,11 @@
         <div class="teller">
             <p>Bộ Lọc</p>
         </div>
-        <div class="sort price"></div>
+        <div class="sort search">
+            <input type="search" class="input" name="gsearch" placeholder="search">
+        </div>
+        <div class="sort price">
+        </div>
         <div class="type sort"></div>
         <div class="evaluate sort">
             <p>Đánh Giá</p>
