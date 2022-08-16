@@ -217,4 +217,65 @@ const fillter_type = [
     },
 ]
 
-
+const categories = [
+    {
+        name : "Thời trang",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Điện tử",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Điện thoại",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Đồng hồ",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Giày dép",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Ô tô/xe máy",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Sắc đẹp",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Sức khỏe",
+        icon : "",
+        img  : "",
+    },
+    {
+        name : "Nhà cửa",
+        icon : "<i class=\"fa-solid fa-arrow-up-from-water-pump\"></i>",
+        img  : "https://images.unsplash.com/photo-1660569833895-afa346764cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+        name : "Bách hóa",
+        icon : "<i class=\"fa-brands fa-app-store-ios\"></i>",
+        img  : "https://images.unsplash.com/photo-1660594714679-19b0173e0558?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+        name : "Trang sức",
+        icon : "<i class=\"fa-brands fa-angrycreative\"></i>",
+        img  : "https://images.unsplash.com/photo-1660554042520-db71c7fea8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+        name : "Sách",
+        icon : "<i class=\"fa-solid fa-address-book\"></i>",
+        img  : "https://images.unsplash.com/photo-1657299143020-4f4bbf05174d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+    }
+]
