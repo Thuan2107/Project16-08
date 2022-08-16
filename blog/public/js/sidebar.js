@@ -24,3 +24,8 @@ console.log(filter_loaihinh)
 $(".type ").html(filter_loaihinh)
 
 
+$('.input').on('input', function () {
+    console.log($(this).val()); // lấy giá trị
+    // console.log($(this).val().toLowerCase()); //
+    console.log($(this).val().toLowerCase().normalize('NFD').replace(/[^0-9a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]/gi), '');
+});
