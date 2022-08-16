@@ -98,5 +98,7 @@
         <script src="/js/product.js"></script>
         <script src="/js/menu_category.js"></script>
         <script src="/js/filter.js"></script>
+        <script src="/js/handle/sortPriceAndRate.js"></script>
+        <script src="/js/handle/pagination.js"></script>
     </body>
 </html>
