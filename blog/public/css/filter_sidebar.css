@@ -104,8 +104,9 @@
 /*.fillter__sidebar {*/
 /*    padding: 0;*/
 /*}*/
-body {
-    overflow-x: hidden;
+
+.fillter__sidebar {
+    padding: 0;
 }
 
 .radio-left {

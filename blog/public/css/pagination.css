@@ -1,0 +1,31 @@
+
+
+.pagination {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.pagination__item {
+    background-color: #e3b3b333;
+    text-decoration: none;
+    padding: 4px 10px;
+    margin: 0 4px;
+    min-width: 37px;
+    display: inline-block;
+    font-size: 14px;
+    color: #2b3f53d1;
+    border: 1px solid #ecd1d196;
+    border-radius: 4px;
+    transition: 0.1s linear;
+}
+
+.pagination__item:hover,
+.cart:hover {
+    filter: brightness(1.1);
+}
+
+.pagination__item.active {
+    background-color: #9393f1;
+    color: #fff;
+}
