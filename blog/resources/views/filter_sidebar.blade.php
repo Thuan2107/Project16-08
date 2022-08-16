@@ -27,11 +27,12 @@
                     <span class="thumb" id="thumbMin" style="left: 0%;"></span>
                     <span class="thumb" id="thumbMax" style="left: 100%;"></span>
                 </div>
-                <input class="range-input" id="rangeMin" type="range" max="100" min="10" step="5" value="0">
-                <input class="range-input" id="rangeMax" type="range" max="100" min="10" step="5" value="100">
+                <input class="range-input" id="rangeMin" type="range" max="100" min="0" step="1" value="0">
+                <input class="range-input" id="rangeMax" type="range" max="100" min="0" step="1" value="100">
+                <input id="ValueMax" type="hidden" value="0">
             </div>
             <div class="display">
-                <span id="min">10</span>
+                <span id="min">0</span>
                 <span id="max">100</span>
             </div>
 
