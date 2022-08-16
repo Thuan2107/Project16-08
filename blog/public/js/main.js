@@ -27,4 +27,4 @@ $('#rangeMax').on('input', function(e) {
     });
 });
 
-const a= [123]
+
