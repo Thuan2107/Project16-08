@@ -3,7 +3,7 @@ let filter_price = '<p>Sắp Xếp</p>'
 fillter_sorts.forEach((filter, i) => {
     filter_price += `<div>
                 <input type="radio" id="price${i}" name="price" class="radio-title"  value="${filter.name}"
-                       ${i==0 ?'checked':''}/>
+                       />
                 <label for="price${i}" >${filter.name}</label>
             </div>`
 })
@@ -13,8 +13,8 @@ let filter_loaihinh = ' <p>Loại Hình</p>'
 
 fillter_type.forEach((filter,i)=>{
     filter_loaihinh += `<div>
-                <input type="radio" id="type${i}" class="radio-title" name="type" value="${filter.name}"
-                       ${i==0 ?'checked':''}/>
+                <input type="radio" id="type${i}" data-id=${filter.id} class="radio-title radio-title1" name="type" value="${filter.name}"
+                       />
                 <label for="type${i}" >${filter.name}</label>
             </div>`
 })
@@ -41,16 +41,6 @@ $('.input').on('input', function () {
 
 });
 
-    $('#price0').click(function(){
-        let listPrice = []
-        listPrice = products.sort((a,b) => (a["cost_price"] - (a["cost_price"]*a["discount"]/100)) - (b["cost_price"] - (b["cost_price"]*b["discount"]/100)))
-        console.log(listPrice)
-        renderProduct(0,6,0,listPrice)
-    })
-    $('#price1').click(function(){
-        let listPrice = []
-        listPrice = products.sort((a,b) => (b["cost_price"] - (b["cost_price"]*b["discount"]/100)) - (a["cost_price"] - (a["cost_price"]*a["discount"]/100)))
-        renderProduct(0,6,0,listPrice)
-    })
+
 
 

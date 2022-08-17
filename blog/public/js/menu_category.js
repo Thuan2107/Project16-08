@@ -1,8 +1,8 @@
 let menu_categories = ''
 
-categories.forEach(category => {
+categories.forEach((category,index) => {
     menu_categories += `<div class="col p-2 t-12 m-12">
-                            <div class="box-categories--item">
+                            <div data-id=${category.id} class="box-categories--item" >
                                 <div class="box-categories--img">
                                     <img src="${category.img}" alt="Items" />
                                     <div class="blur"></div>

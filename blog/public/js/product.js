@@ -1,4 +1,4 @@
-const renderProduct = (start = 0, limit = 0, type = 0, data = []) => {
+const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
     cloneProducts = products.slice(start, limit)
     if(type != 0) cloneProducts = data
     let listProduct = ''
@@ -38,6 +38,9 @@ const renderProduct = (start = 0, limit = 0, type = 0, data = []) => {
                             <div class="addCart">
                                 <button>Thêm vào giỏ</button>
                             </div>
+                        </div>
+                        <div class="discount_number">
+                            <p>${product.discount}%</p>
                         </div>
                     </div>
                 </div>

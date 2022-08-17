@@ -62,9 +62,10 @@ border-left: 2px solid orangered;
     filter: brightness(1.2);
 }
 
-.product_list .product_cart {
+.product_cart {
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    position: relative;
     /* width: 100%; */
 }
 
@@ -221,3 +222,14 @@ border-left: 2px solid orangered;
     background: orangered;
     color: white;
 }
+
+.product_cart .discount_number{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: orangered;
+    opacity: 0.8;
+    padding: 12px;
+    color: white;
+}
+

@@ -217,7 +217,7 @@ const products = [
     {
         name: "Áo sơ mi dài tay form rộng cổ V hàn quốc vải linen cao cấp, thấm hút mồ hôi tốt - SEOUL",
         id: 11,
-        category: 2,
+        category: 0,
         image: "https://cf.shopee.vn/file/2c2ae38b3df22aac6ee2e576051a3430",
         cost_price: 350000,
         discount: "10",
@@ -232,7 +232,7 @@ const products = [
     {
         name: "QUẦN KAKI TÚI HỘP ỐNG RỘNG FORM UNISEX NAM NỮ (kèm ảnh thật)",
         id: 12,
-        category: 2,
+        category: 0,
         image: "https://cf.shopee.vn/file/dc122831c7f86e0fbd370cea75e87ad2",
         cost_price: 170000,
         discount: "14",
@@ -247,7 +247,7 @@ const products = [
     {
         name: "QUẦN SHORT ÂU - QUẦN ĐÙI FORM UNISEX NAM NỮ (kèm hình chụp thật)",
         id: 13,
-        category: 2,
+        category: 0,
         image: "https://cf.shopee.vn/file/ac2d063a81a0c122bba96de3256c1d85",
         cost_price: 150000,
         discount: "18",
@@ -262,7 +262,7 @@ const products = [
     {
         name: "Áo sơ mi dài tay form rộng hàn quốc cổ bẻ, vải linen mềm mại, thấm hút mồ hôi tốt - SEOUL",
         id: 14,
-        category: 2,
+        category: 0,
         image: "https://cf.shopee.vn/file/86b4f78c85c71b128e3616ea3a282d87",
         cost_price: 210000,
         discount: "15",
@@ -307,7 +307,7 @@ const products = [
     {
         name: "Đồng hồ nam cao cấp POEDAGAN mặt đính đá, đồng hồ chính hãng chống nước chống xước dây sắt",
         id: 17,
-        category: 3,
+        category: 1,
         image: "https://cf.shopee.vn/file/9a23a4827746102408a4f061a54227a7",
         cost_price: 240000,
         discount: "15",
@@ -322,7 +322,7 @@ const products = [
     {
         name: "ÁO KHOÁC KAKI JEANS FULL 4 MÀU FORM UNISEX NAM NỮ (kèm ảnh thật)",
         id: 18,
-        category: 2,
+        category: 0,
         image: "https://cf.shopee.vn/file/150ede4d326c53bba323e49c4ab9cd6f",
         cost_price: 170000,
         discount: "18",
@@ -337,7 +337,7 @@ const products = [
     {
         name: "Nón mũ lưỡi trai WONDER thời trang unisex nam nữ",
         id: 19,
-        category: 3,
+        category: 0,
         image: "https://cf.shopee.vn/file/46ddad2772eb651936a791099f773731",
         cost_price: 80000,
         discount: "10",
@@ -353,8 +353,7 @@ const products = [
         name: "Giày AF1 Vệt Nâu Hàng Đẹp Full Box, giày Air force 1 Đủ Size 36-43 Full Box, Bill",
         id: 20,
         category: 4,
-        image: "https://cf.shopee.vn/file/f003b2b1b8c2d994b6c53545c3ecdc32" +
-            "",
+        image: "https://cf.shopee.vn/file/f003b2b1b8c2d994b6c53545c3ecdc32",
         cost_price: 315000,
         discount: "10",
         evaluate: 4.8,
@@ -406,76 +405,92 @@ const fillter_sorts = [
 
 const fillter_type = [
     {
+        id : 0,
         name : "Tất cả",
     },
     {
+        id : 1,
         name : "Bán chạy",
     },
     {
+        id : 2,
         name : "Giảm sâu Friends",
     },
     {
+        id : 3,
         name : "Siêu hot",
     },
 ]
 
 const categories = [
     {
+        id: 0,
         name : "Thời trang",
         icon : "<i class=\"fa-solid fa-bath\"></i>",
         img  : "https://images.unsplash.com/photo-1660548842708-e83b9a17cdb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80",
     },
     {
+        id: 1,
         name : "Điện tử",
         icon : "<i class=\"fa-solid fa-basketball\"></i>",
         img  : "https://images.unsplash.com/photo-1660548842498-852ef7793ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
     },
     {
+        id: 2,
         name : "Điện thoại",
         icon : "<i class=\"fa-solid fa-baseball-bat-ball\"></i>",
         img  : "https://images.unsplash.com/photo-1660569883128-765b7c16f731?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id : 3,
         name : "Đồng hồ",
         icon : "<i class=\"fa-solid fa-baseball\"></i>",
         img  : "https://images.unsplash.com/photo-1660569883128-765b7c16f731?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id: 4,
         name : "Giày dép",
         icon : "<i class=\"fa-solid fa-barcode\"></i>",
         img  : "https://images.unsplash.com/photo-1660489060328-9868cad59617?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id: 5,
         name : "Ô tô/xe máy",
         icon : "<i class=\"fa-brands fa-bandcamp\"></i>",
         img  : "https://images.unsplash.com/photo-1611002214172-792c1f90b59a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id: 6,
         name : "Sắc đẹp",
         icon : "<i class=\"fa-solid fa-baht-sign\"></i>",
         img  : "https://images.unsplash.com/photo-1660548842807-0495cc5423e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
     },
     {
+        id: 7,
         name : "Sức khỏe",
         icon : "<i class=\"fa-solid fa-atom\"></i>",
         img  : "https://images.unsplash.com/photo-1660548840757-b92bc9a5f764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
     },
     {
+        id: 8,
         name : "Nhà cửa",
         icon : "<i class=\"fa-solid fa-arrow-up-from-water-pump\"></i>",
         img  : "https://images.unsplash.com/photo-1660569833895-afa346764cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id: 9,
         name : "Bách hóa",
         icon : "<i class=\"fa-brands fa-app-store-ios\"></i>",
         img  : "https://images.unsplash.com/photo-1660594714679-19b0173e0558?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     },
     {
+        id: 10,
         name : "Trang sức",
         icon : "<i class=\"fa-brands fa-angrycreative\"></i>",
         img  : "https://images.unsplash.com/photo-1660554042520-db71c7fea8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
+        id: 11,
         name : "Sách",
         icon : "<i class=\"fa-solid fa-address-book\"></i>",
         img  : "https://images.unsplash.com/photo-1657299143020-4f4bbf05174d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
