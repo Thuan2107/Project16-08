@@ -79,7 +79,8 @@
     font-size: 18px;
 }
 
-.box-categories--item:hover .box-categories--text {
+.box-categories--item:hover .box-categories--text,
+.box-categories--item.active .box-categories--text{
     background-color: #f04646;
     color: #fff;
 }

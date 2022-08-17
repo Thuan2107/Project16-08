@@ -160,6 +160,40 @@ label {
     left: 0;
 }
 
+/*//range giá*/
+.range_price{
+    display: flex;
+    flex-direction: column;
+}
+
+.range_price input{
+    margin-bottom: 12px;
+    padding: 0 6px;
+    outline: none;
+}
+
+.range_price input:focus{
+    outline: 1px solid orangered;
+    border: 1px solid orangered;
+}
+
+.range_price button{
+    background: orangered;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 4px 0;
+    transition: 0.25s linear;
+}
+.range_price button:hover{
+    background: #fff;
+    color: orangered;
+    text-transform: uppercase;
+    border: 1px solid orangered;
+    cursor: pointer;
+}
+
+
 .teller::before {
     top: 10px;
 }

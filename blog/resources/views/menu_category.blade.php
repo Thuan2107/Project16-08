@@ -4,7 +4,7 @@
             <div class="categories">
                 <span class="categories__head">
                     <i class="fa-solid fa-clone"></i>
-                    Danh mục
+                    <span>Danh mục</span> <span id="name_cate"></span>
                 </span>
                 <div class="box-categories">
                     <div class="row menu__categories-box">
