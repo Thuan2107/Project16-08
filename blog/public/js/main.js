@@ -28,7 +28,7 @@ $('#rangeMax').on('input', function(e) {
     });
 });
 
-const ChangeToSlug = (keyword) => {
+    const ChangeToSlug = (keyword) => {
     let namef, slug;
 
     namef = keyword

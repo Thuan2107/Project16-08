@@ -19,6 +19,9 @@ fillter_type.forEach((filter,i)=>{
             </div>`
 })
 
+//
+
+
 $(".type ").html(filter_loaihinh)
 
 
@@ -37,3 +40,17 @@ $('.input').on('input', function () {
     }
 
 });
+
+    $('#price0').click(function(){
+        let listPrice = []
+        listPrice = products.sort((a,b) => (a["cost_price"] - (a["cost_price"]*a["discount"]/100)) - (b["cost_price"] - (b["cost_price"]*b["discount"]/100)))
+        console.log(listPrice)
+        renderProduct(0,6,0,listPrice)
+    })
+    $('#price1').click(function(){
+        let listPrice = []
+        listPrice = products.sort((a,b) => (b["cost_price"] - (b["cost_price"]*b["discount"]/100)) - (a["cost_price"] - (a["cost_price"]*a["discount"]/100)))
+        renderProduct(0,6,0,listPrice)
+    })
+
+
