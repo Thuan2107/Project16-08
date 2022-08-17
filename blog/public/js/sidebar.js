@@ -40,7 +40,26 @@ $('.input').on('input', function () {
     }
 
 });
+<<<<<<< HEAD
 
 
+=======
+
+<<<<<<< HEAD
+
+=======
+    $('#price0').click(function(){
+        let listPrice = []
+        listPrice = products.sort((a,b) => (a["cost_price"] - (a["cost_price"]*a["discount"]/100)) - (b["cost_price"] - (b["cost_price"]*b["discount"]/100)))
+        console.log(listPrice)
+        renderProduct(0,6,0,listPrice)
+    })
+    $('#price1').click(function(){
+        let listPrice = []
+        listPrice = products.sort((a,b) => (b["cost_price"] - (b["cost_price"]*b["discount"]/100)) - (a["cost_price"] - (a["cost_price"]*a["discount"]/100)))
+        renderProduct(0,6,0,listPrice)
+    })
+>>>>>>> 0c88acd52c0b32ff33f8612517f61c8be2751d2b
+>>>>>>> cb66fa48a3df2488f20094c025d0076978bb93d5
 
 
