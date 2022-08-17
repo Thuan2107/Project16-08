@@ -1,8 +1,13 @@
+// Filter A-Z
+// let listNameProduct = []
+//     products.forEach(product => {
+//         listNameProduct.push(product.name)
+// })
 
-$(document).ready(function(){
-    $('.input').keyup(function (){
-        console.log($(this).val().toLowerCase())
-    });
+// let filterAtoZ = listNameProduct.sort()
+// let filterZtoA = [...filterAtoZ].reverse()
 
-});
 
+// console.log(listNameProduct)
+// console.log(filterAtoZ)
+// console.log(filterZtoA)

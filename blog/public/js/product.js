@@ -44,5 +44,4 @@ const renderProduct = (start = 0, limit = 0, type = 0, data = []) => {
         `
     })
     $('.product_list').html(listProduct)
-
 }
