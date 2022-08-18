@@ -4,40 +4,58 @@
             <p>Bộ Lọc</p>
         </div>
         <div class="sort search">
-            <input type="search" class="input" name="gsearch" placeholder="search">
+            <input type="search" id="search-filter" class="input" name="gsearch" placeholder="search">
         </div>
-        <div class="sort price" id="sort">
+        <div class="sort price" id="sort1">
             <p>Sắp Xếp</p>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="0" checked value="0"/>
-                <label for="0">Giá từ thấp đến cao</label>
+                <input type="radio" name="price" class="radio-title" id="radio0" value="0" checked/>
+                <label for="radio0">Giá từ thấp đến cao</label>
             </div>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="1" value="1"/>
-                <label for="1">Giá từ cao đến thấp</label>
+                <input type="radio" name="price" class="radio-title" id="radio1" value="1"/>
+                <label for="radio1">Giá từ cao đến thấp</label>
             </div>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="2" value="2"/>
-                <label for="2">A - Z</label>
+                <input type="radio" name="price" class="radio-title" id="radio2" value="2"/>
+                <label for="radio2">A - Z</label>
             </div>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="3" value="3"/>
-                <label for="3">Z - A</label>
+                <input type="radio" name="price" class="radio-title" id="radio3" value="3"/>
+                <label for="radio3">Z - A</label>
             </div>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="4" value="4"/>
-                <label for="4">Khuyến mãi nhiều nhất</label>
+                <input type="radio" name="price" class="radio-title" id="radio4" value="4"/>
+                <label for="radio4">Khuyến mãi nhiều nhất</label>
             </div>
             <div class="group_radio">
-                <input type="radio" name="price" class="radio-title" id="5" value="5"/>
-                <label for="5">Khuyến mãi ít nhất</label>
+                <input type="radio" name="price" class="radio-title" id="radio5" value="5"/>
+                <label for="radio5">Khuyến mãi ít nhất</label>
             </div>
         </div>
-        <div class="type sort"></div>
+        <div class="type sort" id="sort_type">
+            <p>Loại Hình</p>
+            <div>
+                <input type="radio" id="type0" data-id="0" class="radio-title radio-title1" name="type" value="0" checked/>
+                <label for="type0" >Tất cả</label>
+            </div>
+            <div>
+                <input type="radio" id="type1" data-id="1" class="radio-title radio-title1" name="type" value="1"/>
+                <label for="type1" >Bán chạy</label>
+            </div>
+            <div>
+                <input type="radio" id="type2" data-id="2" class="radio-title radio-title1" name="type" value="2"/>
+                <label for="type2" >Giảm sâu</label>
+            </div>
+            <div>
+                <input type="radio" id="type3" data-id="3" class="radio-title radio-title1" name="type" value="3"/>
+                <label for="type3" >Siêu hot</label>
+            </div>
+        </div>
         <div class="evaluate sort">
             <p>Đánh Giá</p>
             <div id="rating">
-                <input type="radio" class="filter_star" id="star5" name="rating" value="5" />
+                <input type="radio" class="filter_star" id="star5" name="rating" value="5" checked/>
                 <label class = "full" for="star5" title="Awesome - 5 stars"></label>
 
                 <input type="radio" class="filter_star" id="star4" name="rating" value="4" />
@@ -72,7 +90,7 @@
             <div class="range_price">
                 <input type="text" placeholder="Từ" id="min_price" >
                 <input type="text" placeholder="Đến" id="max_price" >
-                <button id="confirm_price" onclick="filterProduct()">áp dụng</button>
+                <button id="confirm_price" onclick="filter()">áp dụng</button>
             </div>
 
         </div>

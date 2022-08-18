@@ -1,5 +1,5 @@
 const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
-    cloneProducts = products.slice(start, limit)
+    cloneProducts = data.slice(start, limit)
     if(type != 0) cloneProducts = data
     let listProduct = ''
     cloneProducts.forEach((product,index) => {

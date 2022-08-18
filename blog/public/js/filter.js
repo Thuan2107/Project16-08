@@ -1,4 +1,4 @@
-$(function (){
+$(function () {
 //     // Lọc giá từ thấp đến cao
 //     $('#price0').click(function(){
 //         let listPrice = []
@@ -94,37 +94,75 @@ $(function (){
 //         renderProduct(0,0,1,list_category)
 //     })
 
+    // $('#sort1 input').on('change', function (){
+    //     console.log($(this).val())
+    //     switch ($(this).val()){
+    //         case '0':
+    //             console.log('đang sort theo giá nè')
+    //             break;
+    //
+    //         default:
+    //             console.log('đang sort theo không biết nè')
+    //     }
+    // })
+    // $('#search-filter').on('input', function () {
+    //     filter()
+    // })
+    // $('#sort1 input, #sort_type input').on('change', function () {
+    //     filter()
+    // })
+    // $('#rating input').on('click', function () {
+    filter();
+    // })
 })
 
-function filterProduct(){
-    let listProduct = products;
-    // console.log()
-    // $('.box-categories--item.active').removeClass('active');
-    let name_cate = $(this).text()
-    if($(this).hasClass('active')){
-        $('.box-categories--item.active').removeClass('active');
 
-    } else {
-        $('.box-categories--item.active').removeClass('active');
-        $(this).addClass('active')
-        $('#name_cate').text('/' + name_cate)
+function filter() {
+    let search = ChangeToSlug($('#search-filter').val().toLowerCase()),
+        sort = $('#sort1 input:checked').val(),
+        type = parseInt($('#sort_type input:checked').val()),
+        rating = parseInt($('#rating input:checked').val());
+    console.log(search, sort, type, rating);
+    let productFilter = [];
+    for (let i = 0; i < products.length; i++) {
+        if(ChangeToSlug(products[i].name.toLowerCase()).includes(search) && (type === 0 || type ===products[i].type) && rating <= products[i].evaluate){
+            // console.log(products[i]);
+            productFilter.push(products[i]);
+        }
     }
-    // console.log(listNameCate)
-    // let cate_id = $(this).data('id')
-    // listProduct = listProduct.filter(product => {
-    //     return product.category == cate_id
-    // })
-
-
-    if($('.price input').is(':checked')){
-        listProduct = listProduct.sort((a,b) => (a["cost_price"] - (a["cost_price"]*a["discount"]/100)) - (b["cost_price"] - (b["cost_price"]*b["discount"]/100)))
-        listProduct = listProduct.sort((a,b) => (b["cost_price"] - (b["cost_price"]*b["discount"]/100)) - (a["cost_price"] - (a["cost_price"]*a["discount"]/100)))
-        listProduct = listProduct.sort((a,b) => a["name"].localeCompare(b["name"]))
+    // console.log(productFilter)
+    switch (sort){
+        case '0':
+            productFilter = productFilter.sort((a,b) => (a.cost_price - (a.cost_price*a.discount/100))-(b.cost_price - (b.cost_price*b.discount/100)))
+            console.log('thap den cao')
+            break;
+        case '1':
+            productFilter = productFilter.sort((a,b) => (b.cost_price - (b.cost_price*b.discount/100))-(a.cost_price - (a.cost_price*a.discount/100)))
+            console.log( 'cao den thap')
+            break;
+        case '2':
+            productFilter = productFilter.sort((a,b) => a.name.localeCompare(b.name))
+            console.log('a - z')
+            break;
+        case '3':
+            productFilter = productFilter.sort((a,b) => b.name.localeCompare(a.name))
+            console.log('z - a')
+            break;
+        case '4':
+            productFilter = productFilter.sort((a,b) => b.discount - a.discount)
+            console.log('khuyen mai nhieu nhat')
+            break;
+        case '5':
+            productFilter = productFilter.sort((a,b) => a.discount - b.discount)
+            console.log('khuyen mai thap nhat')
+            break;
     }
-    console.log(listProduct);
-    renderProduct(0,6,0,listProduct)
+    console.log(productFilter)
+    renderProduct(0,6,0,productFilter)
 }
-filterProduct()
+
+
+
 
 
 
