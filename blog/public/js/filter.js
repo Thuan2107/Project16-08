@@ -105,15 +105,27 @@ $(function () {
     //             console.log('đang sort theo không biết nè')
     //     }
     // })
-    // $('#search-filter').on('input', function () {
-    //     filter()
-    // })
-    // $('#sort1 input, #sort_type input').on('change', function () {
-    //     filter()
-    // })
-    // $('#rating input').on('click', function () {
+        $('#search-filter').on('input', function () {
+            filter()
+        })
+        $('#sort1 input, #sort_type input').on('change', function () {
+            filter()
+        })
+        $('#rating input').on('click', function () {
+            filter()
+        })
+
+        $('.box-categories--item').on('click',function (){
+            if($(this).hasClass('active')){
+                $('.box-categories--item.active').removeClass('active')
+            }else {
+                $('.box-categories--item.active').removeClass('active')
+                $(this).addClass('active')
+            }
+            filter()
+        })
     filter();
-    // })
+
 })
 
 
@@ -121,12 +133,14 @@ function filter() {
     let search = ChangeToSlug($('#search-filter').val().toLowerCase()),
         sort = $('#sort1 input:checked').val(),
         type = parseInt($('#sort_type input:checked').val()),
-        rating = parseInt($('#rating input:checked').val());
-    console.log(search, sort, type, rating);
+        rating = parseInt($('#rating input:checked').val()),
+        cate_active =  parseInt($('.box-categories--item.active').data('id'));
+    console.log(cate_active)
     let productFilter = [];
     for (let i = 0; i < products.length; i++) {
-        if(ChangeToSlug(products[i].name.toLowerCase()).includes(search) && (type === 0 || type ===products[i].type) && rating <= products[i].evaluate){
-            // console.log(products[i]);
+        // if(ChangeToSlug(products[i].name.toLowerCase()).includes(search) && (type === 0 || type ===products[i].type) && rating <= products[i].evaluate && (!cate_active || cate_active === products[i].category)){
+        if((type === 0 || type ===products[i].type)){
+            console.log(products[i]);
             productFilter.push(products[i]);
         }
     }
@@ -134,27 +148,27 @@ function filter() {
     switch (sort){
         case '0':
             productFilter = productFilter.sort((a,b) => (a.cost_price - (a.cost_price*a.discount/100))-(b.cost_price - (b.cost_price*b.discount/100)))
-            console.log('thap den cao')
+            // console.log('thap den cao')
             break;
         case '1':
             productFilter = productFilter.sort((a,b) => (b.cost_price - (b.cost_price*b.discount/100))-(a.cost_price - (a.cost_price*a.discount/100)))
-            console.log( 'cao den thap')
+            // console.log( 'cao den thap')
             break;
         case '2':
             productFilter = productFilter.sort((a,b) => a.name.localeCompare(b.name))
-            console.log('a - z')
+            // console.log('a - z')
             break;
         case '3':
             productFilter = productFilter.sort((a,b) => b.name.localeCompare(a.name))
-            console.log('z - a')
+            // console.log('z - a')
             break;
         case '4':
             productFilter = productFilter.sort((a,b) => b.discount - a.discount)
-            console.log('khuyen mai nhieu nhat')
+            // console.log('khuyen mai nhieu nhat')
             break;
         case '5':
             productFilter = productFilter.sort((a,b) => a.discount - b.discount)
-            console.log('khuyen mai thap nhat')
+            // console.log('khuyen mai thap nhat')
             break;
     }
     console.log(productFilter)
