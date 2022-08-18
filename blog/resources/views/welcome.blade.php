@@ -89,6 +89,7 @@
                     @include("main_category")
                     {{--   cart--}}
                     @include('cart')
+                    @include('hover_cart')
                 </div>
             </div>
         </div>
