@@ -1,0 +1,54 @@
+.wrapper{
+    margin: 20px;
+
+    /*border: 1px solid black;*/
+}
+.details_img img {
+    height: 70px;
+}
+.grid{
+    font-family: "Open Sans", sans-serif;
+    color: rgba(84, 74, 74, 0.6);
+    text-align: center;
+    font-family: "Times New Roman";
+}
+.details_btn button{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.product_pay{
+    text-align: right;
+
+}
+.product_pay button{
+    height: 50px;
+    width: 150px;
+    background-color: #01a9ac;
+    border: none;
+}
+.input_number{
+    width: 50px;
+    text-align: center;
+    border: none;
+}
+i{
+    margin: 5px;
+
+}
+.details_pay button{
+    width: 30px;
+    border: none;
+}
+.size {
+    width: 600px;
+}
+.table td, .table th{
+    border: 1px solid #dee2e6;
+}
+thead, td{
+    text-align: center;
+}
+
+
+

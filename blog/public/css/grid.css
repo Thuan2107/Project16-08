@@ -1,4 +1,4 @@
-/* 
+/*
 
 Row      =>     .row
 Column   =>     .col
@@ -6,16 +6,16 @@ Column   =>     .col
 Prefix class
                 .m-[0-12] -> mobile (Điện thoại).
                 .t-[0-12] -> tablet (Máy tính bảng).
-                .p-[0-12] -> pc  (Laptop)                    
+                .p-[0-12] -> pc  (Laptop)
 
-.row.no-gutters 
+.row.no-gutters
             =>  Bỏ khoảng cách giữ các item
 
 .row.sm-gutter
             =>  Nhỏ khoảng cách giữ các item
 
-.m-o-[1-11] 
-            =>  margin-left: [1-11]            
+.m-o-[1-11]
+            =>  margin-left: [1-11]
 */
 
 .grid {

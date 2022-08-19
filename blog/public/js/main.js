@@ -514,3 +514,16 @@ const categories = [
         img  : "https://images.unsplash.com/photo-1657299143020-4f4bbf05174d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
     }
 ]
+
+
+// $('.details_pay1').click('click',function (){
+//     let cart_apart = $(this).val();
+//     let add = [];
+//     for (let i = 0; i < products.length; i++) {
+//         if(cart_apart = cart_apart - products[i].id )
+//         {
+//             add = products[i]
+//         }
+//         console.log(add)
+//     }
+// })
