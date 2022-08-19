@@ -1,4 +1,4 @@
-<div class="col p-12 t-12 m-12 radio-left">
+<div class="col-lg-12 ">
     <div class="fillter__sidebar">
         <div class="teller">
             <p>Bộ Lọc</p>
@@ -95,6 +95,4 @@
 
         </div>
     </div>
-</div>
-</div>
 </div>

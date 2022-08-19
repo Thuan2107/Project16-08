@@ -20,6 +20,18 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -81,16 +93,16 @@
         <div class="wrapper">
             <div class="grid wide">
                 <div class="row">
-                    {{--   menu     ggg--}}
-                    @include("menu_category")
-                    {{--   filter    --}}
-                    @include("filter_sidebar")
-                    {{--   main category--}}
-                    @include("main_category")
-                    {{--   cart--}}
-                    @include('cart')
-                    @include('hover_cart')
+                    <div class="col-lg-3">
+                        @include('menu_category')
+                        @include('filter_sidebar')
+                    </div>
+                    <div class="col-lg-9">
+                        @include('main_category')
+                    </div>
                 </div>
+                @include('cart')
+
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -101,5 +113,8 @@
         <script src="/js/filter.js"></script>
         <script src="/js/handle/sortPriceAndRate.js"></script>
         <script src="/js/handle/pagination.js"></script>
+        <script src="/js/detail_product.js"></script>
+        <script src="/js/addToCart.js"></script>
+
     </body>
 </html>
