@@ -135,12 +135,12 @@ function filter() {
         type = parseInt($('#sort_type input:checked').val()),
         rating = parseInt($('#rating input:checked').val()),
         cate_active =  parseInt($('.box-categories--item.active').data('id'));
-    console.log(cate_active)
+    // console.log(cate_active)
     let productFilter = [];
     for (let i = 0; i < products.length; i++) {
         // if(ChangeToSlug(products[i].name.toLowerCase()).includes(search) && (type === 0 || type ===products[i].type) && rating <= products[i].evaluate && (!cate_active || cate_active === products[i].category)){
         if((type === 0 || type ===products[i].type)){
-            console.log(products[i]);
+            // console.log(products[i]);
             productFilter.push(products[i]);
         }
     }
@@ -171,7 +171,7 @@ function filter() {
             // console.log('khuyen mai thap nhat')
             break;
     }
-    console.log(productFilter)
+    // console.log(productFilter)
     renderProduct(0,6,0,productFilter)
 }
 

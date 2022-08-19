@@ -1,6 +1,5 @@
-<div class="col p-9 t-12 m-12">
-    <div class="row">
-        <div class="col p-12 t-12 m-12 category">
+ <div class="row">
+        <div class="col-lg-12">
             <div class="cate_header">
                 <p>danh sách sản phẩm</p>
             </div>
@@ -11,6 +10,5 @@
             </div>
         </div>
         {{--   pagination--}}
-        @include("pagination")
-    </div>
-</div>
+ </div>
+

@@ -3,7 +3,7 @@ const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
     if(type != 0) cloneProducts = data
     let listProduct = ''
     cloneProducts.forEach((product,index) => {
-        listProduct += `<div class="product_item p-4">
+        listProduct += `<div class="product_item col-lg-4" id=${product.id}>
                     <div class="product_cart">
                         <div class="cart_header">
                             <div class="product_image">
@@ -36,7 +36,7 @@ const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
                                 </div>
                             </div>
                             <div class="addCart">
-                                <button>Thêm vào giỏ</button>
+                                <button data-id=${product.id}>Thêm vào giỏ</button>
                             </div>
                         </div>
                         <div class="discount_number">
