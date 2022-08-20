@@ -8,22 +8,21 @@ $( document ).ready(function() {
     }
     $('.addCart button').on('click', function (e){
         e.stopPropagation();
-<<<<<<< HEAD
 
-
-=======
->>>>>>> aa673aae34565ce0e7ce979c710913f64d8e2f53
         let item = ''
 
         count_item = 0
         let new_item = []
             // attr là phương thức tra về môt phần tử được chọn
             let id = $(this).attr('data-id'),
+                cate_id = $(this).parents('.product_item').find('.product_cart').attr('data-cate'),
                 // parents là tra về trực tiếp ptu được chọn
                 // find trả về một phần tử  con của phần tử dc chọn
             price = $(this).parents('.cart_content').find('.rate_and_price .new_price').text(),
             name = $(this).parents('.cart_content').find('.product_name').text(),
             image = $(this).parents('.product_item').find('.cart_header img').attr('src');
+
+        // console.log(cate)
         let flag = 0;
         // map sử dụng để dịch tất cả các mục trong một mảng hoặc đối tượng sang một mảng mục mới.
         list_item.map(function (a, b){
@@ -43,6 +42,7 @@ $( document ).ready(function() {
                 quantity: 1
             });
         }
+
 
 
         setCookie('cart_box',JSON.stringify(list_item),10)

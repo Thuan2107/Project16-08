@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
     let product_item = JSON.parse(getCookie('product_info'))
-    console.log(product_item)
+    // console.log(product_item)
 
 // console.log(product_info)
     let detailproduct = `
@@ -40,7 +40,7 @@ $( document ).ready(function() {
             </div>
         `
 
-console.log(detailproduct)
+// console.log(detailproduct)
     $('.detail_product_body').html(detailproduct)
 
 });
