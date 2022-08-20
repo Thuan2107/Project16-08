@@ -9,15 +9,21 @@ $( document ).ready(function() {
     $('.addCart button').on('click', function (e){
         e.stopPropagation();
 
+    $('.addCart button').on('click', function (){
+        let product_id = $(this).data('id')
         let item = ''
 
         count_item = 0
-        let id = $(this).attr('data-id'),
+        let new_item = []
+            // attr là phương thức tra về môt phần tử được chọn
+            let id = $(this).attr('data-id'),
+                // parents là tra về trực tiếp ptu được chọn
+                // find trả về một phần tử  con của phần tử dc chọn
             price = $(this).parents('.cart_content').find('.rate_and_price .new_price').text(),
             name = $(this).parents('.cart_content').find('.product_name').text(),
             image = $(this).parents('.product_item').find('.cart_header img').attr('src');
         let flag = 0;
-
+        // map sử dụng để dịch tất cả các mục trong một mảng hoặc đối tượng sang một mảng mục mới.
         list_item.map(function (a, b){
             if(a.id == id){
                 a.quantity++
