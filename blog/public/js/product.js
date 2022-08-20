@@ -4,7 +4,7 @@ const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
     let listProduct = ''
     cloneProducts.forEach((product,index) => {
         listProduct += `<div class="product_item col-lg-4" id=${product.id}>
-                    <div class="product_cart">
+                    <div class="product_cart" data-id=${product.inventory}>
                         <div class="cart_header">
                             <div class="product_image">
                                 <img src="${product.image}" alt="">
@@ -48,3 +48,5 @@ const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
     })
     $('.product_list').html(listProduct)
 }
+
+

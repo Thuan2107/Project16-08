@@ -105,6 +105,12 @@
 
             </div>
         </div>
+        <div class="modal_overlay">
+                <div class="modal_content">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p>Thêm vào giỏ hàng thành công</p>
+                </div>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="/js/main.js"></script>
         <script src="/js/sidebar.js"></script>
@@ -115,6 +121,11 @@
         <script src="/js/handle/pagination.js"></script>
         <script src="/js/detail_product.js"></script>
         <script src="/js/addToCart.js"></script>
+        <script src="/js/cookie/main_cookie.js"></script>
+        <script src="/js/clickShowDetail.js"></script>
+        <script src="/js/clickShowDetail.js"></script>
+
+
 
     </body>
 </html>

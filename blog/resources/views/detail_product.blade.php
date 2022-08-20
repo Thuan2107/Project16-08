@@ -37,43 +37,44 @@
 
     <div class="" id="detail_product">
         <div class="detail_product_body row">
-            <button class="btn btn-dark btn_back">Back</button>
-            <div class="product_image col-lg-5">
-                <img src="https://cf.shopee.vn/file/7db7e9c63d42783e5560e30ae1cc1b07" alt="">
-            </div>
-            <div class="product_info col-lg-7">
-                <p class="product_name">Máy nước lọc Pureit Lavita</p>
-                <div class="rate_star">
-                    <span class="rate_number">4.5</span>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <div class="product_price">
-                    <span class="old_price">2.000.000</span>
-                    <span class="new_price">1.800.000</span>
-                </div>
-                <div class="product_quantity">
-                    <span>Số lượng</span>
-                    <div class="restore_quantity">
+{{--            <button class="btn btn-dark btn_back">Back</button>--}}
+{{--            <div class="product_image col-lg-5">--}}
+{{--                <img src="https://cf.shopee.vn/file/7db7e9c63d42783e5560e30ae1cc1b07" alt="">--}}
+{{--            </div>--}}
+{{--            <div class="product_info col-lg-7">--}}
+{{--                <p class="product_name">Máy nước lọc Pureit Lavita</p>--}}
+{{--                <div class="rate_star">--}}
+{{--                    <span class="rate_number">4.5</span>--}}
+{{--                    <i class="fa-solid fa-star"></i>--}}
+{{--                    <i class="fa-solid fa-star"></i>--}}
+{{--                    <i class="fa-solid fa-star"></i>--}}
+{{--                    <i class="fa-solid fa-star"></i>--}}
+{{--                    <i class="fa-solid fa-star-half-stroke"></i>--}}
+{{--                </div>--}}
+{{--                <div class="product_price">--}}
+{{--                    <span class="old_price">2.000.000</span>--}}
+{{--                    <span class="new_price">1.800.000</span>--}}
+{{--                </div>--}}
+{{--                <div class="product_quantity">--}}
+{{--                    <span>Số lượng</span>--}}
+{{--                    <div class="restore_quantity">--}}
 
-                            <button>-</button>
+{{--                            <button>-</button>--}}
 
-                        <input type="text" value="1">
+{{--                        <input type="text" value="1">--}}
 
-                            <button>+</button>
+{{--                            <button>+</button>--}}
 
-                    </div>
-                    <span class="inventory">100 sản phẩm có sẵn</span>
-                </div>
-                <button class="btn btn-outline-danger py-3 mt-5">Thêm vào giỏ hàng</button>
-            </div>
+{{--                    </div>--}}
+{{--                    <span class="inventory">100 sản phẩm có sẵn</span>--}}
+{{--                </div>--}}
+{{--                <button class="btn btn-outline-danger py-3 mt-5">Thêm vào giỏ hàng</button>--}}
+{{--            </div>--}}
         </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/js/main.js"></script>
-<script src="/js/detail_product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/detail_product.js"></script>
+    <script src="/js/cookie/main_cookie.js"></script>
 </body>
 </html>

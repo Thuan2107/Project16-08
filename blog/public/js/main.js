@@ -63,23 +63,6 @@ $('#rangeMax').on('input', function(e) {
     return slug
 }
 
-// let products1 = [
-//     {
-//         name: "Chuột Gaming Wavecom VM01 Black - White Siêu Bền ( Hàng Chính Hãng )",
-//         id: 0,
-//         category: 0,
-//         image: "https://cf.shopee.vn/file/238afb2d478cc78f91485add3bf7afb0",
-//         cost_price: 170000,
-//         discount: "39",
-//         evaluate: 3.9,
-//         type: 1,
-//         logo_shop: "https://cf.shopee.vn/file/d37efde5b9ede7845eedfdc23a0f2fcb_tn",
-//         name_shop: "viethuystores",
-//         inventory: 129,
-//         trade_price: 150000,
-//         trade_inventory: 10
-//     },
-// ];
 
 const products = [
     {
