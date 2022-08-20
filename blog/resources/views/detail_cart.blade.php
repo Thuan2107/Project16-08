@@ -61,7 +61,42 @@
                                 <i class="fa-solid fa-trash-can"></i>
                             </td>
                         </tr>
+                        <tr class="title_one">
+                            <td>1</td>
+                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
+                            {{--                            <td  class="details_img">--}}
+                            {{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
+                            {{--                            </td>--}}
+                            <td>Danh mục test</td>
+                            <td>Tồn kho test</td>
+                            <td class="details_pay">
+                                <input type="text" class="input_number" value="1"/>
+                            </td>
+                            <td>10.000</td>
 
+                            <td> test</td>
+                            <td>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </td>
+                        </tr>
+                        <tr class="title_one">
+                            <td>1</td>
+                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
+                            {{--                            <td  class="details_img">--}}
+                            {{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
+                            {{--                            </td>--}}
+                            <td>Danh mục test</td>
+                            <td>Tồn kho test</td>
+                            <td class="details_pay">
+                                <input type="text" class="input_number" value="1"/>
+                            </td>
+                            <td>10.000</td>
+
+                            <td> test</td>
+                            <td>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </td>
+                        </tr>
 
                     </tbody>
 
@@ -74,6 +109,7 @@
         <h3>Thành tiền</h3>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
+                <p>Tổng tiền : <span>0</span></p>
                 <div class="d-flex">Giảm giá : <input class="mx-1" style="width: 40%"/>
                     <select>
                         <option>Tiền</option>

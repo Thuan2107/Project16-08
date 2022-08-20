@@ -9,8 +9,7 @@ $( document ).ready(function() {
     $('.addCart button').on('click', function (e){
         e.stopPropagation();
 
-    $('.addCart button').on('click', function (){
-        let product_id = $(this).data('id')
+
         let item = ''
 
         count_item = 0
