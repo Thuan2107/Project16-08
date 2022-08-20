@@ -30,16 +30,19 @@
 .input_number{
     width: 50px;
     text-align: center;
-    border: none;
 }
+
+
+
 i{
     margin: 5px;
 
 }
-.details_pay button{
-    width: 30px;
-    border: none;
+
+.details_pay{
+    /*display: flex;*/
 }
+
 .size {
     width: 600px;
 }
