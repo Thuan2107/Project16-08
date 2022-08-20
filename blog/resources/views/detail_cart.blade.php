@@ -72,10 +72,12 @@
     </div>
     <div class="col-lg-3">
         <h3>Thành tiền</h3>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" id="card_thanhtien">
             <div class="card-body">
-                <p>Tổng tiền : <span>0</span></p>
-                <div class="d-flex">Giảm giá : <input class="mx-1" style="width: 40%"/>
+                <p>Tổng tiền : <span></span></p>
+                <div class="d-flex">
+                    Giảm giá :
+                    <input type="text" class="mx-1" style="width: 40%" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="1,000,000" />
                     <select>
                         <option>Tiền</option>
                         <option>%</option>
@@ -98,5 +100,6 @@
 <script src="/js/detail_cart.js"></script>
 <script src="/js/payment.js"></script>
 <script src="/js/cookie/main_cookie.js"></script>
+<script src="/js/show_detail_cart.js"></script>
 </body>
 </html>

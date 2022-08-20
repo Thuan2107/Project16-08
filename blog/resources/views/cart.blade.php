@@ -15,7 +15,8 @@
         </div>
         <div class="cart_footer">
             <span class="text-dark"><span class="count_item text-danger"></span>sản phẩm trong giỏ hàng</span>
-            <button class="btn btn-danger">Xem giỏ hàng</button>
+            <button class="btn btn-danger" id="show_detail_cart">Xem giỏ hàng</button>
         </div>
     </div>
 </div>
+
