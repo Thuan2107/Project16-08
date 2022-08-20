@@ -8,8 +8,11 @@ $( document ).ready(function() {
     }
     $('.addCart button').on('click', function (e){
         e.stopPropagation();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aa673aae34565ce0e7ce979c710913f64d8e2f53
         let item = ''
 
         count_item = 0
