@@ -24,81 +24,71 @@
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="grid wide">
+<div class="wrapper row container-fluid">
+    <div class="col-lg-9">
         <h3>Danh sách sản phẩm</h3>
         <div class="row">
             <div class="col p-12 t-12 m-12">
                 <table class="table">
                     <thead>
                         <tr >
-
-                            <th >Hình ảnh</th>
-                            <th class="size">Tên sản phẩm</th>
-                            <th >Đơn giá</th>
-                            <th >Số lượng</th>
-                            <th >Số tiền</th>
-                            <th >Thao tác</th>
+                            <th style="width: 10%;">STT</th>
+                            <th style="width: 20%">Tên sản phẩm</th>
+                            <th style="width: 15%">Danh mục</th>
+                            <th style="width: 15%">Tồn kho</th>
+                            <th style="width: 10%">Số lượng mua</th>
+                            <th style="width: 10%">Giá tiền</th>
+                            <th style="width: 10%">Thành tiền</th>
+                            <th style="width: 10%">Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="title_one">
-                            <td  class="details_img">
-                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">
-                            </td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt</td>
-                            <td>10.000</td>
+                            <td>1</td>
+                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
+{{--                            <td  class="details_img">--}}
+{{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
+{{--                            </td>--}}
+                            <td>Danh mục test</td>
+                            <td>Tồn kho test</td>
                             <td class="details_pay">
-                                <button>-</button>
-                                <input type="text" class="input_number" aria-valuenow="1" value="1"/>
-                                <button>+</button>
+                                <input type="text" class="input_number" value="1"/>
                             </td>
                             <td>10.000</td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="details_img">
-                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">
-                            </td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt</td>
-                            <td>10.000</td>
-                            <td class="details_pay">
-                                <button onclick="btn_apart">-</button>
-                                <input type="text" class="input_number" aria-valuenow="1" value="1"/>
-                                <button onclick="btn_add">+</button>
-                            </td>
-                            <td>10.000</td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </td>
 
-                        </tr>
-                        <tr class="title_one">
-                            <td  class="details_img">
-                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">
-                            </td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt</td>
-                            <td>10.000</td>
-                            <td class="details_pay">
-                                <button>-</button>
-                                <input type="text" class="input_number" aria-valuenow="1" value="1"/>
-                                <button>+</button>
-                            </td>
-                            <td>10.000</td>
+                            <td> test</td>
                             <td>
                                 <i class="fa-solid fa-trash-can"></i>
                             </td>
                         </tr>
+
+
                     </tbody>
 
                 </table>
-                <div class="product_pay">
-                    <label>Tổng tiền: <span></span></label>
-                    <button>Thanh toán</button>
-                </div>
+
             </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <h3>Thành tiền</h3>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <div class="d-flex">Giảm giá : <input class="mx-1" style="width: 40%"/>
+                    <select>
+                        <option>Tiền</option>
+                        <option>%</option>
+                    </select>
+                </div>
+                <div>
+                    <p>VAT(10%) <span><input type="checkbox" /></span></p>
+                </div>
+                <p class="mt-3 h4" >Thành tiền: <span>1.000.000</span></p>
+            </div>
+        </div>
+
+        <div class="pay-btn mt-2 " >
+            <button class="btn btn-success w-100">Thanh toán</button>
         </div>
     </div>
 </div>
