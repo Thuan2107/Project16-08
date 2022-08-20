@@ -8,9 +8,12 @@ $( document ).ready(function() {
     }
     $('.addCart button').on('click', function (e){
         e.stopPropagation();
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> aa673aae34565ce0e7ce979c710913f64d8e2f53
         let item = ''
-
         count_item = 0
         let new_item = []
             // attr là phương thức tra về môt phần tử được chọn
@@ -20,9 +23,17 @@ $( document ).ready(function() {
                 // find trả về một phần tử  con của phần tử dc chọn
             price = $(this).parents('.cart_content').find('.rate_and_price .new_price').text(),
             name = $(this).parents('.cart_content').find('.product_name').text(),
-            image = $(this).parents('.product_item').find('.cart_header img').attr('src');
+            image = $(this).parents('.product_item').find('.cart_header img').attr('src'),
+                inventory = $(this).parents('.product_item').find('.product_cart').attr('data-id'),
+        category = $(this).parents('.product_item').find('.product_cart').attr('data-cate');
+            let category_name;
+        for (let i = 0; i < categories.length; i++) {
 
-        // console.log(cate)
+            if(categories[i].id == category){
+                category_name = categories[i].name
+            }
+        }
+        console.log(category_name)
         let flag = 0;
         // map sử dụng để dịch tất cả các mục trong một mảng hoặc đối tượng sang một mảng mục mới.
         list_item.map(function (a, b){
@@ -39,7 +50,9 @@ $( document ).ready(function() {
                 cost_price: price,
                 image: image,
                 name: name,
-                quantity: 1
+                quantity: 1,
+                inventory : inventory,
+                category_name
             });
         }
 

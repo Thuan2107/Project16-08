@@ -42,61 +42,26 @@
                             <th style="width: 10%">Xóa</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="title_one">
-                            <td>1</td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
+                    <tbody id="table_payments">
+{{--                        <tr class="title_one">--}}
+{{--                            <td>1</td>--}}
+{{--                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>--}}
 {{--                            <td  class="details_img">--}}
 {{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
 {{--                            </td>--}}
-                            <td>Danh mục test</td>
-                            <td>Tồn kho test</td>
-                            <td class="details_pay">
-                                <input type="text" class="input_number" value="1"/>
-                            </td>
-                            <td>10.000</td>
+{{--                            <td>Danh mục test</td>--}}
+{{--                            <td>Tồn kho test</td>--}}
+{{--                            <td class="details_pay">--}}
+{{--                                <input type="text" class="input_number" value="1"/>--}}
+{{--                            </td>--}}
+{{--                            <td>10.000</td>--}}
 
-                            <td> test</td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </td>
-                        </tr>
-                        <tr class="title_one">
-                            <td>1</td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
-                            {{--                            <td  class="details_img">--}}
-                            {{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
-                            {{--                            </td>--}}
-                            <td>Danh mục test</td>
-                            <td>Tồn kho test</td>
-                            <td class="details_pay">
-                                <input type="text" class="input_number" value="1"/>
-                            </td>
-                            <td>10.000</td>
+{{--                            <td> test</td>--}}
+{{--                            <td>--}}
+{{--                                <i class="fa-solid fa-trash-can"></i>--}}
+{{--                            </td>--}}
+{{--                        </tr>--}}
 
-                            <td> test</td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </td>
-                        </tr>
-                        <tr class="title_one">
-                            <td>1</td>
-                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>
-                            {{--                            <td  class="details_img">--}}
-                            {{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
-                            {{--                            </td>--}}
-                            <td>Danh mục test</td>
-                            <td>Tồn kho test</td>
-                            <td class="details_pay">
-                                <input type="text" class="input_number" value="1"/>
-                            </td>
-                            <td>10.000</td>
-
-                            <td> test</td>
-                            <td>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </td>
-                        </tr>
 
                     </tbody>
 
@@ -131,5 +96,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/js/main.js"></script>
 <script src="/js/detail_cart.js"></script>
+<script src="/js/payment.js"></script>
+<script src="/js/cookie/main_cookie.js"></script>
 </body>
 </html>
