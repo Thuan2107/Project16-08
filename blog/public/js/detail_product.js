@@ -40,7 +40,7 @@ $( document ).ready(function() {
             </div>
         `
 
-console.log(detailproduct)
+// console.log(detailproduct)
     $('.detail_product_body').html(detailproduct)
 
 });

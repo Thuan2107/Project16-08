@@ -368,7 +368,7 @@ const products = [
     {
         name: "Giày thể thao Sneaker nam nữ AF1 trắng cao cấp ,thời trang Genz 2022",
         id: 21,
-        category: 3.9,
+        category: 4,
         image: "https://cf.shopee.vn/file/f543e2b6d5eedc46610faec55137aea3",
         cost_price: 350000,
         discount: "10",
