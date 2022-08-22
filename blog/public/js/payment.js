@@ -3,9 +3,12 @@ $( document ).ready(function() {
     if(getCookie('cart_box')){
         list_payment = JSON.parse(getCookie('cart_box'))
     }
-
-        let tr = ''
-        list_payment.map((item,index) => {
+    for (let i = 0; i < list_payment.length; i++) {
+        // console.log(list_payment[1])
+    }
+    console.log(typeof list_payment)
+    let tr = ''
+    list_payment.map((item,index) => {
 
             tr+= `
                 <tr class="title_one" >
