@@ -1,12 +1,13 @@
 $( document ).ready(function() {
+    // console.log()
     let list_payment = []
     if(getCookie('cart_box')){
         list_payment = JSON.parse(getCookie('cart_box'))
     }
-    for (let i = 0; i < list_payment.length; i++) {
-        // console.log(list_payment[1])
-    }
-    console.log(typeof list_payment)
+    // for (let i = 0; i < list_payment.length; i++) {
+    //     // console.log(list_payment[1])
+    // }
+    // console.log(typeof list_payment)
     let tr = ''
     list_payment.map((item,index) => {
 
@@ -31,13 +32,19 @@ $( document ).ready(function() {
            `
         })
 
-        $("#table_payments").html(tr)
+    $("#table_payments").html(tr)
+    // console.log(222)
 
 
+    // $('.delete_btn').on('click')
+    // $(document).on('click', '.delete_btn', function (){
+    //     console.log(1)
+    // })
+    // $("#table_payments").html(tr)
 
 
-
-    $(".delete_btn").on('click', function () {
+    $('.delete_btn').on('click', function () {
+        console.log('1')
         let id = $(this).data('id');
         $(this).parents('tr').remove();
         let newCookie = JSON.parse(getCookie('cart_box'));
@@ -56,7 +63,6 @@ $( document ).ready(function() {
          */
     })
 
-    $("#table_payments").html(tr)
     function getTotal(){
         let summ=0;
         for (let i = 0; i < list_payment.length; i++) {
