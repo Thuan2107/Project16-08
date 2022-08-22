@@ -127,6 +127,5 @@
         <script src="/js/show_detail_cart.js"></script>
 
 
-
     </body>
 </html>

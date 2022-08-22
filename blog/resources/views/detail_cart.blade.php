@@ -43,24 +43,7 @@
                         </tr>
                     </thead>
                     <tbody id="table_payments">
-{{--                        <tr class="title_one">--}}
-{{--                            <td>1</td>--}}
-{{--                            <td>Màn hình ASUS VA249HE 24 inch Full HD 5ms Bảo Vệ Mắt </td>--}}
-{{--                            <td  class="details_img">--}}
-{{--                                <img src="https://cf.shopee.vn/file/90a5607d6fe6b78425af544325e61231">--}}
-{{--                            </td>--}}
-{{--                            <td>Danh mục test</td>--}}
-{{--                            <td>Tồn kho test</td>--}}
-{{--                            <td class="details_pay">--}}
-{{--                                <input type="text" class="input_number" value="1"/>--}}
-{{--                            </td>--}}
-{{--                            <td>10.000</td>--}}
 
-{{--                            <td> test</td>--}}
-{{--                            <td>--}}
-{{--                                <i class="fa-solid fa-trash-can"></i>--}}
-{{--                            </td>--}}
-{{--                        </tr>--}}
 
 
                     </tbody>
@@ -74,10 +57,11 @@
         <h3>Thành tiền</h3>
         <div class="card" style="width: 18rem;" id="card_thanhtien">
             <div class="card-body">
-                <p>Tổng tiền : <span></span></p>
+                <p>Tổng tiền : <span id="total"></span></p>
                 <div class="d-flex">
                     Giảm giá :
                     <input type="text" class="mx-1" style="width: 40%" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="1,000,000" />
+
                     <select>
                         <option>Tiền</option>
                         <option>%</option>
@@ -88,24 +72,24 @@
                 </div>
                 <p class="mt-3 h4" >Thành tiền: <span>1.000.000</span></p>
             </div>
+
         </div>
 
         <div class="pay-btn mt-2 " >
             <button class="btn btn-success w-100">Thanh toán</button>
+            <tr><td>Integer</td><td><input id="intTextBox"></td></tr>
         </div>
     </div>
 
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/js/main.js"></script>
-<script src="/js/detail_cart.js"></script>
-<script src="/js/payment.js"></script>
-<script src="/js/cookie/main_cookie.js"></script>
-<script src="/js/show_detail_cart.js"></script>
-<script>
-    // $("#currency-field").mask('#,###,###', function (e){
-    // })
-</script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/detail_cart.js"></script>
+    <script src="/js/payment.js"></script>
+    <script src="/js/cookie/main_cookie.js"></script>
+    <script src="/js/show_detail_cart.js"></script>
+
+
 </body>
 </html>
