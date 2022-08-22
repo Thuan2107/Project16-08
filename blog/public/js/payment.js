@@ -4,7 +4,10 @@ $( document ).ready(function() {
         list_payment = JSON.parse(getCookie('cart_box'))
 
     }
-
+    for (let i = 0; i < list_payment.length; i++) {
+        // console.log(list_payment[1])
+    }
+    console.log(typeof list_payment)
     let tr = ''
     list_payment.map((item,index) => {
 
