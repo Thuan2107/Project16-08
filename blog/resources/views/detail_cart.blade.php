@@ -77,7 +77,6 @@
 
         <div class="pay-btn mt-2 " >
             <button class="btn btn-success w-100">Thanh toán</button>
-            <tr><td>Integer</td><td><input id="intTextBox"></td></tr>
         </div>
     </div>
 
