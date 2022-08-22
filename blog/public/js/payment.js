@@ -1,13 +1,15 @@
+
+
 $( document ).ready(function() {
     // console.log()
     let list_payment = []
     if(getCookie('cart_box')){
         list_payment = JSON.parse(getCookie('cart_box'))
     }
-    // for (let i = 0; i < list_payment.length; i++) {
-    //     // console.log(list_payment[1])
-    // }
-    // console.log(typeof list_payment)
+    for (let i = 0; i < list_payment.length; i++) {
+        // console.log(list_payment[1])
+    }
+    console.log(typeof list_payment)
     let tr = ''
     list_payment.map((item,index) => {
 
@@ -23,7 +25,7 @@ $( document ).ready(function() {
                             <td >${(item.cost_price * 1).toLocaleString('en-US')}</td>
 
 
-                            <td >${(item.quantity * item.cost_price).toLocaleString('en-US')}</td>
+                            <td class="td_price">${(item.quantity * item.cost_price).toLocaleString('en-US')}</td>
 
                             <td>
                                 <i class="fa-solid fa-trash-can delete_btn" data-id=${item.id}></i>
@@ -36,15 +38,29 @@ $( document ).ready(function() {
     // console.log(222)
 
 
-    // $('.delete_btn').on('click')
-    // $(document).on('click', '.delete_btn', function (){
-    //     console.log(1)
-    // })
-    // $("#table_payments").html(tr)
+    getTotal()
+    // function getTotal(){
+    //     let summ=0;
+    //     for (let i = 0; i < list_payment.length; i++) {
+    //         summ += parseInt(list_payment[i].cost_price)
+    //     }
+    //     console.log(summ)
+    //     $('#total').text(summ.toLocaleString('en-US'))
+    // }
+
+    function getTotal(){
+        let tr_price = $('.title_one')
+        let total = 0
+        tr_price.each(function (){
+            total += Number(formatNum($(this).find('.td_price').text()))
+        })
+        $("#total").text(total.toLocaleString('en-US'))
+
+    }
 
 
-    $('.delete_btn').on('click', function () {
-        console.log('1')
+
+    $(".delete_btn").on('click', function () {
         let id = $(this).data('id');
         $(this).parents('tr').remove();
         let newCookie = JSON.parse(getCookie('cart_box'));
@@ -54,15 +70,17 @@ $( document ).ready(function() {
             }
         }
         setCookie('cart_box', JSON.stringify(newCookie))
-
         /**
          * Chuyen tu json sang array
          * tim phan tu co id bang id vua chon va xoa phan tu ra khoi mang
          * chuyen arr sang json
          * luu lai cookie
          */
+        getTotal()
+        // $('#total').text(getTotal())
     })
 
+    $("#table_payments").html(tr)
     function getTotal(){
         let summ=0;
         for (let i = 0; i < list_payment.length; i++) {

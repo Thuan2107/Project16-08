@@ -27,7 +27,6 @@ $( document ).ready(function() {
                 category_name = categories[i].name
             }
         }
-        console.log(category_name)
         let flag = 0;
         // map sử dụng để dịch tất cả các mục trong một mảng hoặc đối tượng sang một mảng mục mới.
         list_item.map(function (a, b){
