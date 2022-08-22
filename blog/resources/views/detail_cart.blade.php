@@ -72,10 +72,12 @@
                 </div>
                 <p class="mt-3 h4" >Thành tiền: <span>1.000.000</span></p>
             </div>
+
         </div>
 
         <div class="pay-btn mt-2 " >
             <button class="btn btn-success w-100">Thanh toán</button>
+            <tr><td>Integer</td><td><input id="intTextBox"></td></tr>
         </div>
     </div>
 
@@ -87,7 +89,6 @@
     <script src="/js/payment.js"></script>
     <script src="/js/cookie/main_cookie.js"></script>
     <script src="/js/show_detail_cart.js"></script>
-
 
 
 </body>
