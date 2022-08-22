@@ -74,7 +74,7 @@
         <h3>Thành tiền</h3>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <p>Tổng tiền : <span>0</span></p>
+                <p>Tổng tiền : <span class="total_price"></span></p>
                 <div class="d-flex">Giảm giá : <input class="mx-1" style="width: 40%"/>
                     <select>
                         <option>Tiền</option>
