@@ -32,7 +32,7 @@ const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
                                 </div>
                                 <div class="product_price">
                                     <span class="old_price">${product.cost_price.toLocaleString('it-IT', )} </span>
-                                    <span class="new_price"> ${(product.cost_price - (product.cost_price * (product.discount / 100))).toLocaleString('it-IT', )}</span>
+                                    <span class="new_price"> ${(product.cost_price - (product.cost_price * (product.discount / 100)))}</span>
                                 </div>
                             </div>
                             <div class="addCart">
