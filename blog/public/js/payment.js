@@ -52,9 +52,7 @@ $( document ).ready(function() {
     })
 
 
-    function validate_input(){
 
-    }
 
 
 
