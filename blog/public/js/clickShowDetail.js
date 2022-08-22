@@ -17,7 +17,7 @@ $( document ).ready(function() {
         }
         setCookie("product_info", JSON.stringify(product_info), 10)
 
-        window.location = "/a"
+        window.location = "/chi-tiet-san-pham"
     })
 
 

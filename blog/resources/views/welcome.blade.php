@@ -124,6 +124,7 @@
         <script src="/js/cookie/main_cookie.js"></script>
         <script src="/js/clickShowDetail.js"></script>
         <script src="/js/clickShowDetail.js"></script>
+        <script src="/js/show_detail_cart.js"></script>
 
 
     </body>

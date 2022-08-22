@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/a', function () {
+Route::get('/chi-tiet-san-pham', function () {
     return view('detail_product');
 });
-Route::get('/b', function () {
+Route::get('/thanh-toan', function () {
     return view('detail_cart');
 });
