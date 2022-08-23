@@ -65,7 +65,10 @@ $(function () {
             }
             filter()
         })
-    filter();
+        $('#min_price, #max_price').on('change', function (){
+            filter()
+        })
+        filter();
 
 })
 
@@ -75,12 +78,23 @@ function filter() {
         sort = $('#sort1 input:checked').val(),
         type = parseInt($('#sort_type input:checked').val()),
         rating = parseInt($('#rating input:checked').val()),
-        cate_active =  parseInt($('.box-categories--item.active').data('id'));
+        cate_active =  parseInt($('.box-categories--item.active').data('id')),
+        min_price = parseInt($('#min_price').val()),
+        max_price = parseInt($('#max_price').val());
+
     // console.log(cate_active)
     let productFilter = [];
     for (let i = 0; i < products.length; i++) {
-        // if(ChangeToSlug(products[i].name.toLowerCase()).includes(search) && (type === 0 || type ===products[i].type) && rating <= products[i].evaluate && (!cate_active || cate_active === products[i].category)){
-        if((type === 0 || type ===products[i].type)){
+        let price = products[i].cost_price - (products[i].cost_price*products[i].discount/100)
+        if(ChangeToSlug(products[i].name.toLowerCase()).includes(search)
+            && (type === 0 || type ===products[i].type)
+            && (rating <= products[i].evaluate)
+            && (!cate_active || cate_active === products[i].category)
+            // && ('' || (price <= max_price && price >= min_price))
+        )
+            // console.log(typeof price,typeof min_price)
+        {
+        // if((type === 0 || type ===products[i].type)){
             // console.log(products[i]);
             productFilter.push(products[i]);
         }
@@ -112,8 +126,11 @@ function filter() {
             // console.log('khuyen mai thap nhat')
             break;
     }
+
+    //Lọc giá
+
     // console.log(productFilter)
-    renderProduct(0,6,0,productFilter)
+    renderProduct(0,21,0,productFilter)
 }
 
 

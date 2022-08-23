@@ -55,22 +55,24 @@
     </div>
     <div class="col-lg-3">
         <h3>Thành tiền</h3>
-        <div class="card" style="width: 18rem;" id="card_thanhtien">
+        <div class="card w-100" style="width: 18rem;" id="card_thanhtien">
             <div class="card-body">
                 <p>Tổng tiền : <span id="total"></span></p>
                 <div class="d-flex">
                     Giảm giá :
-                    <input type="text" class="mx-1" style="width: 40%" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="1,000,000" />
+                    <input type="text" class="pl-1 mx-1 type" style="width: 40%" name="currency-field" id="type_price"  data-type="currency"  />
+                    <input type="text" class="pl-1 mx-1 type" style="width: 40%;display: none;" name="currency-field" id="type_percent" data-type="currency"  />
 
-                    <select>
-                        <option>Tiền</option>
-                        <option>%</option>
+
+                    <select id="type_discount">
+                        <option value="0" selected>Tiền</option>
+                        <option value="1">%</option>
                     </select>
                 </div>
-                <div>
-                    <p>VAT(10%) <span><input type="checkbox" /></span></p>
+                <div id="vat">
+                    <p>VAT(10%) <span><input type="checkbox" value="10"/></span></p>
                 </div>
-                <p class="mt-3 h4" >Thành tiền: <span>1.000.000</span></p>
+                <p class="mt-3 h5 d-flex justify-content-between font-weight-bold" ><u>Thành tiền:</u> <span class="total_final" id="total-for_price"></span><span class="total_final" style="display: none;" id="total-for_percent"></span></p>
             </div>
 
         </div>

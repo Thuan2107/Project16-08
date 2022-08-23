@@ -75,7 +75,7 @@ border-left: 2px solid orangered;
 }
 
 .cart_header .product_image {
-    background: red;
+    /*background: red;*/
     position: relative;
     /* width: 100%; */
     height: 200px;

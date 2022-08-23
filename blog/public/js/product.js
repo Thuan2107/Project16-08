@@ -1,4 +1,4 @@
-const renderProduct = (start = 0, limit = 6, type = 0, data = []) => {
+const renderProduct = (start = 0, limit = 10, type = 0, data = []) => {
     cloneProducts = data.slice(start, limit)
     if(type != 0) cloneProducts = data
     let listProduct = ''
